@@ -38,9 +38,9 @@ To execute the application, run the following command:
 
 ## Project Structure
 
-- *src/main/cpp*: This directory contains the source code for the ImGui example application.
-- *libs/imgui*: This is a submodule containing the ImGui source code.
-- *build.gradle*: This is the Gradle build script, which uses Nokee plugins to build the ImGui library and the example application together.
+- **src/main/cpp**: This directory contains the source code for the ImGui example application.
+- **libs/imgui**: This is a submodule containing the ImGui source code.
+- **build.gradle**: This is the Gradle build script, which uses Nokee plugins to build the ImGui library and the example application together.
 
 ## Important Details
 
