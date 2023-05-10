@@ -2,5 +2,17 @@ plugins {
 	id 'dev.nokee.cpp-application'
 }
 
+import dev.nokee.language.cpp.tasks.CppCompile
+
 application {
+	tasks.configureEach(CppCompile) {
+		compilerArgs.addAll(toolChain.map {
+			if (it in Clang) {
+				return ['-std=c++17']
+			}
+			return []
+		})
+		includes.from('libs/imgui')
+	}
+	cppSources.from(fileTree('libs/imgui').include('*.cpp'))
 }
